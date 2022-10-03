@@ -7,11 +7,24 @@ function List({ toDos, setTodos }) {
     <div className="list-container">
       <h2 className="list-title">Working.. 🔥</h2>
       <div className="list-wrapper">
-        <Todo toDos={toDos[0].title} />
+        {toDos
+          .filter((todo) => {
+            return todo.isDone === false;
+          })
+          .map((todo) => {
+            console.log("ToDo : ", todo);
+            return <Todo key={todo.id} toDos={todo} />;
+          })}
       </div>
       <h2 className="list-title">Done..! 🎉</h2>
       <div className="list-wrapper">
-        <Todo toDos={toDos[0].body} />
+        {toDos
+          .filter((todo) => {
+            return todo.isDone === true;
+          })
+          .map((todo) => {
+            return <Todo toDos={todo} />;
+          })}
       </div>
     </div>
   );

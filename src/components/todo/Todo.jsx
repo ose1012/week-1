@@ -3,11 +3,12 @@ import "./style.css";
 
 function Todo({ toDos }) {
   console.log("Todo : ", toDos);
+  const { title, body } = toDos;
   return (
     <div className="todo-container">
       <div>
-        <h2 className="todo-title">{toDos}</h2>
-        <div>{toDos}</div>
+        <h2 className="todo-title">{title}</h2>
+        <div>{body}</div>
       </div>
       <div className="button-set">
         <button className="todo-delete-button button">삭제하기</button>

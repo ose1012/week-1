@@ -1,8 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import List from "../list/List";
 import "./style.css";
-import { v4 as uuidv4 } from "uuid";
 function Form({ toDos, setToDos }) {
   const merge = {
     id: 0,
@@ -10,21 +8,24 @@ function Form({ toDos, setToDos }) {
     body: "",
     isDone: false,
   };
-  const [toDo, setToDo] = useState("");
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
 
-  const onClick = (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
-    if (toDo.title === "" || toDo.body === "") return;
-    console.log(title, body);
-    setToDos((prev) => [...prev, merge]);
-    setToDo(merge);
+    if (title === "" || body === "") {
+      alert("제목과 내용을 입력해주세요!");
+      return;
+    }
+    setToDos((prev) => [...prev, { ...merge, id: Date.now(), title, body }]);
+    setTitle("");
+    setBody("");
   };
+  console.log(title, body);
   console.log("Form : ", toDos);
   return (
     <>
-      <form className="add-form">
+      <form className="add-form" onSubmit={onSubmit}>
         <div className="input-group">
           <label className="form-label">제목</label>
           <input
@@ -45,7 +46,7 @@ function Form({ toDos, setToDos }) {
             }}
           />
         </div>
-        <button className="add-button" onClick={onClick}>
+        <button className="add-button" type="submit">
           추가하기
         </button>
       </form>

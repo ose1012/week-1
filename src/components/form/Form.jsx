@@ -12,15 +12,13 @@ function Form({ toDos, setToDos }) {
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
 
-  const inputTitleRef = useRef(null);
-  const inputBodyRef = useRef(null);
+  const inputTitleRef = useRef();
+  const inputBodyRef = useRef();
   const onSubmit = (event) => {
     event.preventDefault();
     inputTitleRef.current.value = "";
     inputBodyRef.current.value = "";
     setToDos((prev) => [...prev, { ...merge, id: Date.now(), title, body }]);
-    // setTitle("");
-    // setBody("");
   };
   return (
     <>

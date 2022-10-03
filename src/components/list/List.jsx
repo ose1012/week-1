@@ -7,11 +7,11 @@ function List({ toDos, setTodos }) {
     <div className="list-container">
       <h2 className="list-title">Working.. 🔥</h2>
       <div className="list-wrapper">
-        <Todo toDos={toDos && toDos[0].title} />
+        <Todo toDos={toDos[0].title} />
       </div>
       <h2 className="list-title">Done..! 🎉</h2>
       <div className="list-wrapper">
-        <Todo toDos={toDos && toDos[0].body} />
+        <Todo toDos={toDos[0].body} />
       </div>
     </div>
   );

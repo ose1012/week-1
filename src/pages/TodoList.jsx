@@ -23,6 +23,7 @@ const TodoList = () => {
     <Layout>
       <Header />
       <Form setToDos={setToDos} toDos={toDos} />
+      <List setToDos={setToDos} toDos={toDos} />
     </Layout>
   );
 };

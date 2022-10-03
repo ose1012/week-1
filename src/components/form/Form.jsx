@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import List from "../list/List";
-import TodoList from "../../pages/TodoList";
 import "./style.css";
 import { v4 as uuidv4 } from "uuid";
 function Form({ toDos, setToDos }) {
@@ -11,9 +10,7 @@ function Form({ toDos, setToDos }) {
     body: "",
     isDone: false,
   };
-  const { v4: uuidv4 } = require("uuid");
   const [toDo, setToDo] = useState("");
-  // const [toDos, setToDos] = useState([]);
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
 
@@ -52,17 +49,6 @@ function Form({ toDos, setToDos }) {
           추가하기
         </button>
       </form>
-      {/* <ul>
-        {toDos.map((item) => {
-          return (
-            <li key={uuidv4()}>
-              {item.title}
-              {item.body}
-            </li>
-          );
-        })}
-      </ul> */}
-      <List title={title} body={body} toDos={toDos} setToDos={setToDos} />
     </>
   );
 }

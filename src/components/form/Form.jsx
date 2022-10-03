@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./style.css";
+import { useRef } from "react";
 function Form({ toDos, setToDos }) {
   const merge = {
     id: 0,
@@ -11,24 +12,24 @@ function Form({ toDos, setToDos }) {
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
 
+  const inputTitleRef = useRef(null);
+  const inputBodyRef = useRef(null);
   const onSubmit = (event) => {
     event.preventDefault();
-    if (title === "" || body === "") {
-      alert("제목과 내용을 입력해주세요!");
-      return;
-    }
+    inputTitleRef.current.value = "";
+    inputBodyRef.current.value = "";
     setToDos((prev) => [...prev, { ...merge, id: Date.now(), title, body }]);
-    setTitle("");
-    setBody("");
+    // setTitle("");
+    // setBody("");
   };
-  console.log(title, body);
-  console.log("Form : ", toDos);
   return (
     <>
       <form className="add-form" onSubmit={onSubmit}>
         <div className="input-group">
           <label className="form-label">제목</label>
           <input
+            ref={inputTitleRef}
+            required
             type="text"
             name="title"
             className="add-input input-body"
@@ -38,6 +39,8 @@ function Form({ toDos, setToDos }) {
           />
           <label className="form-label">내용</label>
           <input
+            ref={inputBodyRef}
+            required
             type="text"
             name="body"
             className="add-input"

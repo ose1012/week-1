@@ -2,7 +2,6 @@ import React from "react";
 import "./style.css";
 
 function Todo({ toDos }) {
-  console.log("Todo : ", toDos);
   const { title, body } = toDos;
   return (
     <div className="todo-container">

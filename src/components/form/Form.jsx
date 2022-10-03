@@ -3,31 +3,31 @@ import { useState } from "react";
 import List from "../list/List";
 import TodoList from "../../pages/TodoList";
 import "./style.css";
-function Form() {
+import { v4 as uuidv4 } from "uuid";
+function Form({ toDos, setToDos }) {
+  const merge = {
+    id: 0,
+    title: "",
+    body: "",
+    isDone: false,
+  };
+  const { v4: uuidv4 } = require("uuid");
   const [toDo, setToDo] = useState("");
-  const [toDos, setToDos] = useState([]);
+  // const [toDos, setToDos] = useState([]);
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
-  const onChange = (event) => setToDo(event.target.value);
-  const onSubmit = (event) => {
+
+  const onClick = (event) => {
     event.preventDefault();
-    // if (toDo === "") {
-    //   return;
-    // }
-    // setToDos((currentArray) => [toDo, ...currentArray]);
-    // setToDo("");
-    const merge = {
-      id: 0,
-      title: title,
-      body: body,
-      isDone: false,
-    };
+    if (toDo.title === "" || toDo.body === "") return;
     console.log(title, body);
     setToDos((prev) => [...prev, merge]);
+    setToDo(merge);
   };
+  console.log("Form : ", toDos);
   return (
     <>
-      <form className="add-form" onSubmit={onSubmit}>
+      <form className="add-form">
         <div className="input-group">
           <label className="form-label">제목</label>
           <input
@@ -48,18 +48,21 @@ function Form() {
             }}
           />
         </div>
-        <button className="add-button">추가하기</button>
+        <button className="add-button" onClick={onClick}>
+          추가하기
+        </button>
       </form>
-      <ul>
+      {/* <ul>
         {toDos.map((item) => {
           return (
-            <li key={item.id}>
+            <li key={uuidv4()}>
               {item.title}
               {item.body}
             </li>
           );
         })}
-      </ul>
+      </ul> */}
+      <List title={title} body={body} toDos={toDos} setToDos={setToDos} />
     </>
   );
 }

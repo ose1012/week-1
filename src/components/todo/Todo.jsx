@@ -1,24 +1,17 @@
 import React from "react";
 import "./style.css";
 
-function Todo() {
+function Todo({ toDos }) {
+  console.log("Todo : ", toDos);
   return (
     <div className="todo-container">
       <div>
-        <h2 className="todo-title"></h2>
-        <div></div>
+        <h2 className="todo-title">{toDos}</h2>
+        <div>{toDos}</div>
       </div>
       <div className="button-set">
-        <button
-          className="todo-delete-button button"
-        >
-          삭제하기
-        </button>
-        <button
-          className="todo-complete-button button"
-        >
-          완료
-        </button>
+        <button className="todo-delete-button button">삭제하기</button>
+        <button className="todo-complete-button button">완료</button>
       </div>
     </div>
   );

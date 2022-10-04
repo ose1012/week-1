@@ -17,7 +17,7 @@ function List({ toDos, setToDos }) {
   return (
     <div className="list-container">
       <div className="list-wrap">
-        <h2 className="list-title">🔥WORKING🔥</h2>
+        <h2 className="list-title working">🔥WORKING🔥</h2>
         <div className="list-wrapper">
           {toDos
             .filter((todo) => {
@@ -37,7 +37,7 @@ function List({ toDos, setToDos }) {
         </div>
       </div>
       <div className="list-wrap">
-        <h2 className="list-title">✨DONE✨</h2>
+        <h2 className="list-title done">✨DONE✨</h2>
         <div className="list-wrapper">
           {toDos
             .filter((todo) => {

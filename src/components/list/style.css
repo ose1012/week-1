@@ -1,7 +1,7 @@
 .list-container {
   padding: 0 24px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .list-wrapper {
   display: grid;

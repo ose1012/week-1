@@ -7,11 +7,13 @@ h2 {
   color: black;
 }
 h2.list-title {
+  text-align: center;
   color: #7b9acc;
 }
 h2.todo-title {
   margin: 0;
 }
+
 body {
   background-color: #fcf6f5;
 }

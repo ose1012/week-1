@@ -1,3 +1,7 @@
+*{
+  font-family: 'Gowun Batang', serif;
+  font-weight: bold;
+}
 .list-container {
   padding: 0 24px;
 }

@@ -22,3 +22,6 @@ a {
   text-decoration: none;
   color: #7b9acc;
 }
+button {
+  cursor: pointer;
+}

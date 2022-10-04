@@ -11,8 +11,9 @@
   gap: 20px;
 }
 .form-label {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
+  color: #7b9acc;
 }
 .add-input {
   border: none;
@@ -27,11 +28,6 @@ input:focus {
   outline: none;
 }
 
-.form-label {
-  font-size: 16px;
-  font-weight: 700;
-  color: #7b9acc;
-}
 .add-button {
   color: #fcf6f5;
   background-color: #7b9acc;

@@ -7,6 +7,7 @@ h2 {
   color: black;
 }
 h2.list-title {
+  width: 300px;
   text-align: center;
   color: #7b9acc;
 }

@@ -55,10 +55,11 @@ function Form({ toDos, setToDos }) {
     <>
       <form className="add-form" onSubmit={onSubmit}>
         <div className="input-group">
-          <label className="form-label" placeholder="Title">
+          <label className="form-label" placeholder="Title" htmlFor="title">
             Title
           </label>
           <input
+            id="title"
             ref={inputTitleRef}
             required
             type="text"
@@ -68,10 +69,11 @@ function Form({ toDos, setToDos }) {
               setTitle(e.target.value);
             }}
           />
-          <label className="form-label" placeholder="Content">
+          <label className="form-label" placeholder="Content" htmlFor="content">
             Content
           </label>
           <input
+            id="content"
             ref={inputBodyRef}
             required
             type="text"

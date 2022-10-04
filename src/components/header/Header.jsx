@@ -8,7 +8,6 @@ function Header() {
         <div>
           <a href="#">My Todo List</a>
         </div>
-        <div>React</div>
       </div>
     </>
   );

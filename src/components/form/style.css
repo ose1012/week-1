@@ -1,10 +1,8 @@
 .add-form {
-  background-color: #7b9acc;
-  border-radius: 12px;
   color: #fcf6f5;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 30px;
+  margin: 20px auto;
+  padding: 10px;
 }
 .add-form,
 .input-group {
@@ -18,18 +16,25 @@
 }
 .add-input {
   border: none;
-  border-radius: 12px;
   height: 40px;
+  background-color: #fcf6f5;
+  border-bottom: 2px solid #7b9acc;
+  color: #7b9acc;
   padding: 0 12px;
   width: 240px;
 }
+input:focus {
+  outline: none;
+}
+
 .form-label {
   font-size: 16px;
   font-weight: 700;
+  color: #7b9acc;
 }
 .add-button {
-  color: #7b9acc;
-  background-color: white;
+  color: #fcf6f5;
+  background-color: #7b9acc;
   border: none;
   border-radius: 50%;
   width: 50px;

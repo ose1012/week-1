@@ -55,7 +55,9 @@ function Form({ toDos, setToDos }) {
     <>
       <form className="add-form" onSubmit={onSubmit}>
         <div className="input-group">
-          <label className="form-label">제목</label>
+          <label className="form-label" placeholder="Title">
+            Title
+          </label>
           <input
             ref={inputTitleRef}
             required
@@ -66,7 +68,9 @@ function Form({ toDos, setToDos }) {
               setTitle(e.target.value);
             }}
           />
-          <label className="form-label">내용</label>
+          <label className="form-label" placeholder="Content">
+            Content
+          </label>
           <input
             ref={inputBodyRef}
             required

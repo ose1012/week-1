@@ -1,0 +1,10 @@
+.list-container {
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-around;
+}
+.list-wrapper {
+  display: grid;
+  flex-wrap: wrap;
+  gap: 12px;
+}

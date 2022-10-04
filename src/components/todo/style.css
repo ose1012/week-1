@@ -1,0 +1,29 @@
+.todo-container {
+  width: 300px;
+  border-bottom: 2px solid #7b9acc;
+  padding: 0px 0px 15px 0px;
+}
+
+.button-set {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  float: right;
+}
+
+.todo-delete-button {
+  font-size: 20px;
+  border: none;
+  background-color: #fcf6f5;
+}
+
+.todo-complete-button {
+  font-size: 20px;
+  border: none;
+  background-color: #fcf6f5;
+}
+.cancel-logo,
+.delete-logo,
+.done-logo {
+  color: #7b9acc;
+}

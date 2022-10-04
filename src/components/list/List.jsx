@@ -16,41 +16,45 @@ function List({ toDos, setToDos }) {
   };
   return (
     <div className="list-container">
-      <h2 className="list-title">Working.. 🔥</h2>
-      <div className="list-wrapper">
-        {toDos
-          .filter((todo) => {
-            return todo.isDone === false;
-          })
-          .map((todo) => {
-            return (
-              <Todo
-                key={todo.id}
-                id={todo.id}
-                toDos={todo}
-                onRemove={onRemove}
-                onEdit={onEdit}
-              />
-            );
-          })}
+      <div className="list-wrap">
+        <h2 className="list-title">🔥WORKING🔥</h2>
+        <div className="list-wrapper">
+          {toDos
+            .filter((todo) => {
+              return todo.isDone === false;
+            })
+            .map((todo) => {
+              return (
+                <Todo
+                  key={todo.id}
+                  id={todo.id}
+                  toDos={todo}
+                  onRemove={onRemove}
+                  onEdit={onEdit}
+                />
+              );
+            })}
+        </div>
       </div>
-      <h2 className="list-title">Done..! 🎉</h2>
-      <div className="list-wrapper">
-        {toDos
-          .filter((todo) => {
-            return todo.isDone === true;
-          })
-          .map((todo) => {
-            return (
-              <Todo
-                key={todo.id}
-                id={todo.id}
-                toDos={todo}
-                onRemove={onRemove}
-                onEdit={onEdit}
-              />
-            );
-          })}
+      <div className="list-wrap">
+        <h2 className="list-title">✨DONE✨</h2>
+        <div className="list-wrapper">
+          {toDos
+            .filter((todo) => {
+              return todo.isDone === true;
+            })
+            .map((todo) => {
+              return (
+                <Todo
+                  key={todo.id}
+                  id={todo.id}
+                  toDos={todo}
+                  onRemove={onRemove}
+                  onEdit={onEdit}
+                />
+              );
+            })}
+        </div>
       </div>
     </div>
   );

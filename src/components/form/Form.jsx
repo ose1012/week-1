@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "./style.css";
 import { useRef } from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 // React는 사용자 인터페이스를 구축하기 위한 선언적이고 효율적이며 유연한 JavaScript 라이브러리입니다.
 // "컴포넌트" 라고 불리는 작고 고립된 코드의 파편을 이용하여 복잡한 UI를 구성하도록 돕습니다.
 
@@ -78,7 +79,7 @@ function Form({ toDos, setToDos }) {
           />
         </div>
         <button className="add-button" type="submit">
-          추가하기
+          <FontAwesomeIcon icon={faPlus} className="plus-logo" />
         </button>
       </form>
     </>

@@ -1,16 +1,17 @@
 import React from "react";
-import './style.css';
+import "./style.css";
 
 function Header() {
-    return (
-      <>
-        <div className="container">
-          <div>My Todo List</div>
-          <div>React</div>
+  return (
+    <>
+      <div className="container">
+        <div>
+          <a href="#">My Todo List</a>
         </div>
-      </>
-    );
-  }
-
+        <div>React</div>
+      </div>
+    </>
+  );
+}
 
 export default Header;
